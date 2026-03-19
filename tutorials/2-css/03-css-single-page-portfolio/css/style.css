@@ -1,0 +1,218 @@
+/*---------------------------------------color palette */
+
+:root{
+--bgcolor-1: #fff;
+--bgcolor-2: gray;
+--bgcolor-3:#e6e6e5;
+--fcolor: #111;
+--ac-1:#2a7b9b;
+--ac-2:#edea53;
+--ac-3:#57c785;
+--dcolor: #1A1D1A;
+}
+
+
+
+
+/*---------------------------------------CSS resets */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*---------------------------------------Respecting useres font size preferences */
+html {
+    font-size: 100%;
+}
+
+/*---------------------------------------General CSS */
+
+html {
+scroll-behavior: smooth;
+
+}
+
+
+body {
+    background-color: var(--bgcolor-1);
+    color: var(--fcolor);
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+@media(max-width: 700px){
+    body{
+        font-size: 1.3rem;
+    }
+}
+
+header {
+    padding: 6rem;
+    margin-bottom: 3rem;
+    /*---------------------------------------background-color:rgb(182, 213, 223) ; */
+    background: #2A7B9B;
+    background: linear-gradient(90deg,#2a7b9b 0%, #57c785 69%, #edea53 100%);
+    border-bottom: #000 1px solid;
+    color:var(--bgcolor-1);
+    /*---------------------------------------text-align: center; */
+}
+
+@media(max-width: 570px){
+    header{
+        padding-left: 2rem;
+    }
+
+}
+
+@media(max-width: 410px){
+    header{
+        padding-left: 1rem;
+    }
+
+}
+
+
+header h1 {
+font-size: 3rem;
+text-decoration: underline;
+text-decoration-style:dotted ;
+font-family: "Merriweather", serif;
+
+}
+
+nav {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--ac-1);
+    transition: all 0.5s ease;
+}
+
+nav a:hover {
+    background-color:var(--ac-2);
+    /* transform: scale(1.3); */
+    
+}
+
+
+
+main{
+    margin: 0%;
+}
+
+@media(max-width: 725px){
+main{
+    margin: 2rem;
+}
+}
+
+@media(max-width: 685px){
+main{
+    margin: 1rem;
+}
+}
+
+
+main h2 {
+ text-align: center;
+}
+
+.about-section p{
+    text-align: center;
+}
+
+.about-section, .portfolio-section, .contact-section {
+    margin-bottom: 5rem;
+}
+
+.about-content, .portfolio-content, .contact-content{
+    max-width: 60rem;
+    margin: 0rem auto;
+    padding: 2rem 0;
+}
+
+.about-content h2, .portfolio-content h2, .contact-content h2 {
+    padding: 2rem 0;
+}
+
+.portfolio-item {
+    margin: 5rem 10rem;
+    background-color: var(--bgcolor-1);
+    padding: 4rem;
+    text-align: justify;
+    border-radius: .5rem;
+    box-shadow: 10px 10px 5px var(--bgcolor-2);
+}
+
+@media(max-width: 800px){
+.portfolio-item{
+    margin: 3rem;
+}
+}
+
+
+@media(max-width: 650px){
+.portfolio-item{
+    margin: 2rem;
+}
+}
+
+
+
+.portfolio-item img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border: 0.5rem;
+}
+
+.portfolio-item p {
+    font-size: 1.2rem;
+}
+
+.portfolio-item h3 {
+    margin: 1rem 0;
+}
+
+.about-section {
+ background-color: var(--bgcolor-1);
+}
+
+.portfolio-section {
+    background-color:var(--bgcolor-3);
+
+}
+
+.contact-section p{
+    text-align: center;
+}
+
+footer {
+        background: #2A7B9B;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 69%, rgba(237, 234, 83, 1) 100%);
+    border-bottom: #000 1px solid;
+    color:var(--bgcolor-1);
+    padding: 1rem;
+}
+
+footer p {
+font-size: 1.2rem;
+
+}
+
+/*---------------------------------------style classes */
+
+.accent-1, .accent-2{
+color: var(--ac-2);
+}
+
+
+

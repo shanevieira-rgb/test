@@ -1,0 +1,108 @@
+
+
+
+body{
+    animation: change-color 10s infinite alternate;
+}
+
+@keyframes change-color{
+    0%{background-color: orange;}
+    50%{background-color: darkorange;}
+    100%{background-color: goldenrod;}
+}
+
+
+
+.title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew{
+    0%{transform: skew(0deg,0deg);}
+    100%{transform: skew(30deg,20deg);}
+}
+
+.square{
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+.square:hover{
+    background-color: blue;
+    transform: rotate(30deg);
+
+}
+
+.button-div{
+    text-align: center;
+}
+.button{
+    color: white;
+    background-color: green;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 1s;
+}
+
+.button:hover{
+    background-color: lime;
+    color: black;
+    transform: scale(1.5);
+}
+
+.loading{
+    background-color: green;
+    color: white;
+    animation: stretch 5s infinite alternate;
+    width: 80vw;
+}
+
+@keyframes stretch{
+    0%{width: 100px;}
+    100%{width: 80vw;}
+}
+
+.square2{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    border-radius: 60px;
+    margin: 50px auto;
+    animation: rotate 1s infinite;
+    transition: all 1s
+}
+
+@keyframes rotate{
+    0%{rotate: 0deg;}
+    25%{rotate: 90deg;}
+    50%{rotate: 180deg;}
+    75%{rotate: 270deg;}
+    100%{rotate: 360deg;}
+
+}
+
+.square2:hover{
+    background-color: rgb(207, 77, 250)
+}
+
+.square3{
+    background-color: rgb(236, 38, 38);
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    transition: all 3s;
+    transition-delay: 2s;
+}
+
+.square3:hover{
+    transform: matrix(1, 2, 3, 4, 5, 6);
+}
