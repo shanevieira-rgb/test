@@ -28,14 +28,26 @@ textbox.addEventListener("keypress", function(e) {
     sound.currentTime = 0;
     sound.play().catch(() => {});
 
-    // text
+
     const msg = document.createElement("div");
     msg.classList.add("message");
-    msg.textContent = text;
+
+
+    const chicken = document.createElement("img");
+    chicken.src = "images/chicken.png";
+
+
+    const textEl = document.createElement("span");
+    textEl.textContent = text;
+
+
+    msg.appendChild(chicken);
+    msg.appendChild(textEl);
+
 
     container.appendChild(msg);
 
-    // text movement
+
     setTimeout(() => {
       msg.classList.add("move");
     }, 10);

@@ -4,6 +4,25 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.text{
+    position:absolute;
+    color: darkgreen;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    font-size: 70px;
+    left: 40px;
+}
+
+.title{
+    position:absolute;
+    color: darkgreen;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    font-size: 60px;
+    left: 200px;
+    top: 80px
+}
+
 .lips{
   display: block;
   margin-left: auto;
@@ -12,27 +31,35 @@ body {
 }
 
 
-#container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* text movement */
 .message {
   position: absolute;
   left: 50%;
   bottom: 20px;
   transform: translateX(-50%) scale(2);
-  font-size: 40px;
-  transition: all 1.0s ease;
+  transition: all 0.7s ease;
 }
 
 .message.move {
-  bottom: 51%;
+  bottom: 50%;
   transform: translate(-50%, 50%) scale(1);
+}
+
+.message img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;        /* change size here */
+  z-index: 0;          /* behind text */
+  pointer-events: none;
+}
+
+.message span {
+  position: relative;
+  font-size: 40px;
+  z-index: 1;
+  color: black;
+  text-align: center;
 }
 
 #textbox {
@@ -42,5 +69,5 @@ body {
   width: 100%;
   padding: 15px;
   font-size: 18px;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
