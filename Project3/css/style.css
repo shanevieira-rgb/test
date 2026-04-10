@@ -45,8 +45,8 @@ body {
 }
 
 .message img {
-  position: absolute;
-  left: 50%;
+  position: fixed;
+  left: 125px;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 600px;    
@@ -58,8 +58,9 @@ body {
   position: relative;
   font-size: 40px;
   z-index: 1;
-  color: black;
-  text-align: center;
+  color:#CC5500;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align:center;
 }
 
 #textbox {

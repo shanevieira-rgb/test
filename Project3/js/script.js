@@ -38,7 +38,16 @@ textbox.addEventListener("keypress", function(e) {
 
 
     const textEl = document.createElement("span");
-    textEl.textContent = text;
+    const words = text.split(" ");
+    textEl.innerHTML = "";
+
+    for (let i = 0; i < words.length; i++) {
+    textEl.innerHTML += words[i] + " ";
+
+    if ((i + 2) % 3 === 0) {
+    textEl.innerHTML += "<br>";
+  }
+}
 
 
     msg.appendChild(chicken);
