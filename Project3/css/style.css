@@ -49,8 +49,8 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;        /* change size here */
-  z-index: 0;          /* behind text */
+  width: 600px;    
+  z-index: 0;         
   pointer-events: none;
 }
 
