@@ -45,7 +45,7 @@ textbox.addEventListener("keypress", function(e) {
     for (let i = 0; i < words.length; i++) {
     textEl.innerHTML += words[i] + " ";
 
-    if ((i + 2) % 3 === 0) {
+    if ((i + 1) % 3 === 0) {
     textEl.innerHTML += "<br>";
   }
 }
