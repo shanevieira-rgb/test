@@ -5,7 +5,7 @@ body {
 }
 
 .text{
-    position:absolute;
+    position:fixed;
     color: darkgreen;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-decoration: underline;
@@ -14,7 +14,7 @@ body {
 }
 
 .title{
-    position:absolute;
+    position:fixed;
     color: darkgreen;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-decoration: underline;
@@ -24,10 +24,10 @@ body {
 }
 
 .lips{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -71,4 +71,23 @@ body {
   padding: 15px;
   font-size: 18px;
   box-sizing: border-box;
+}
+
+
+#hungryText {
+  position: fixed;
+  bottom: 250px; 
+  right: 200px;  
+  z-index: 1000;
+  font-style: italic;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  transform: translate(-50%, -50%);
+  
+  font-size: 40px;
+  color: red;
+
+  opacity: 0;
+  transition: opacity 1.5s ease;
+
+  pointer-events: none;
 }

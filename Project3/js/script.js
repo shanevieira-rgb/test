@@ -1,6 +1,7 @@
 const textbox = document.getElementById("textbox");
 const container = document.getElementById("container");
 const gif = document.getElementById("lipsGif");
+const hungryText = document.getElementById("hungryText");
 
 
 const sound = new Audio("sounds/eat.mp3");
@@ -62,8 +63,17 @@ textbox.addEventListener("keypress", function(e) {
     }, 10);
 
 
-    setTimeout(() => {
-      msg.remove();
-    }, 3000);
+setTimeout(() => {
+  msg.remove();
+
+
+  hungryText.style.opacity = "1";
+
+  
+  setTimeout(() => {
+    hungryText.style.opacity = "0";
+  }, 2000);
+
+}, 3000);
   }
 });
