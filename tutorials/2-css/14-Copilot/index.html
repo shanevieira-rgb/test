@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Polaroid Camera "copilot test"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="site-brand">
+                <h1>Polaroid Flashback</h1>
+                <p>Click the retro camera below to take a webcam snapshot. Every photo appears as a polaroid, and your favorites live in the saved memories wall.</p>
+            </div>
+            <div class="camera-shell">
+                <h2>Retro 80s Polaroid Camera</h2>
+                <div class="lens-window">
+                    <video id="camera-video" autoplay muted playsinline></video>
+                    <div class="no-camera" id="camera-fallback" hidden>
+                        Webcam unavailable. Please allow camera access or switch to a secure browser tab.
+                    </div>
+                </div>
+                <div class="camera-controls">
+                    <div class="info">
+                        <strong>Live view ready</strong>
+                        <span id="camera-status">Looking sharp. Press capture.</span>
+                    </div>
+                    <button id="capture-btn">Capture Polaroid</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-card" id="photo-wall">
+                <h3>Your Photo Wall</h3>
+                <div class="photo-grid" id="photos"></div>
+            </section>
+
+            <section class="section-card" id="saved-wall">
+                <div class="saved-actions">
+                    <div>
+                        <h3>Saved Memories</h3>
+                        <p class="status"><span id="saved-count">0</span> saved polaroids ready to replay.</p>
+                    </div>
+                    <button id="clear-saved">Clear Saved</button>
+                </div>
+                <div class="photo-grid" id="saved-photos"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
