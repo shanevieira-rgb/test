@@ -88,7 +88,7 @@ body {
 }
 
 #phoneButton {
-   position: absolute;
+   position: fixed;
     width: 200px;
     height: 225px;
     top:50px; 
@@ -96,7 +96,7 @@ body {
 }
 
 #clockButton{
-   position: absolute;
+   position: fixed;
   /* background: transparent;
   border: none; */
   width: 150px;
@@ -106,7 +106,7 @@ body {
 }
 
 #windowButton{
-   position: absolute;
+   position: fixed;
   /* background: transparent;
   border: none; */
   width: 250px;
@@ -116,7 +116,7 @@ body {
 }
 
 #bedButton{
-   position: absolute;
+   position: fixed;
   /* background: transparent;
   border: none; */
   width: 600px;
@@ -126,7 +126,7 @@ body {
 }
 
 #doorButton{
-   position: absolute;
+   position: fixed;
   /* background: transparent;
   border: none; */
   width: 275px;
