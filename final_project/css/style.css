@@ -99,10 +99,10 @@ body {
    position: absolute;
   /* background: transparent;
   border: none; */
-  width: 155px;
+  width: 165px;
   height: 180px;
   top:220px; 
-  right:515px;
+  right:500px;
 }
 
 #windowButton{
