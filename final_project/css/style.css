@@ -95,8 +95,8 @@ body {
 }
 
 #clockButton{
-  background: transparent;
-  border: none;
+  /* background: transparent;
+  border: none; */
   width: 175px;
   height: 175px;
   top:215px; 
@@ -104,8 +104,8 @@ body {
 }
 
 #windowButton{
-  background: transparent;
-  border: none;
+  /* background: transparent;
+  border: none; */
   width: 350px;
   height: 350px;
   top:250px; 
@@ -113,8 +113,8 @@ body {
 }
 
 #bedButton{
-  background: transparent;
-  border: none;
+  /* background: transparent;
+  border: none; */
   width: 600px;
   height: 300px;
   bottom:125px; 
@@ -122,8 +122,8 @@ body {
 }
 
 #doorButton{
-  background: transparent;
-  border: none;
+  /* background: transparent;
+  border: none; */
   width: 275px;
   height: 700px;
   bottom:150px; 
