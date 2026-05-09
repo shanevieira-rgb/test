@@ -10,7 +10,7 @@ body {
 
 #gameCanvas {
     width: 1920px;
-    height: 1000px;
+    height: 1080px;
     position: relative;
     overflow: hidden;
     background: white;
@@ -34,7 +34,7 @@ body {
     font-size: 28px;
 }
 
-#topText { top: 30px; left: 30px; }
+#topText { top: 50px; left: 30px; }
 #bottomText { bottom: 30px; right: 30px; }
 
 #backgroundImage,
