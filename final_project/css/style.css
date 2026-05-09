@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+}
+
+#gameCanvas {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+#scene1, #scene2, #scene3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#scene2, #scene3 {
+    display: none;
+}
+
+.textbox {
+    position: absolute;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.95);
+    border: 2px solid black;
+    font-size: 28px;
+}
+
+#topText { top: 30px; left: 30px; }
+#bottomText { bottom: 30px; right: 30px; }
+
+#backgroundImage,
+#doorBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#uiLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+
+.storyButton {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.popup {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.95);
+    border: 2px solid black;
+    padding: 20px 30px;
+    font-size: 28px;
+    text-align: center;
+    display: none;
+    z-index: 20;
+}
+
+#windowImage,
+#phoneImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    display: none;
+    z-index: 15;
+}
+
+#phoneButton {
+    width: 200px;
+    height: 225px;
+    top:50px; 
+    left:25px;
+}
+
+#clockButton{
+  background: transparent;
+  border: none;
+  width: 175px;
+  height: 175px;
+  top:215px; 
+  right:535px;
+}
+
+#windowButton{
+  background: transparent;
+  border: none;
+  width: 350px;
+  height: 350px;
+  top:250px; 
+  left:600px;
+}
+
+#bedButton{
+  background: transparent;
+  border: none;
+  width: 600px;
+  height: 300px;
+  bottom:125px; 
+  left:100px;
+}
+
+#doorButton{
+  background: transparent;
+  border: none;
+  width: 275px;
+  height: 700px;
+  bottom:150px; 
+  right:85px;
+}

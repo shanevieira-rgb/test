@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Loop Story</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="gameCanvas">
+
+    <!-- SCENE 1 -->
+    <div id="scene1">
+        <div id="topText" class="textbox"></div>
+        <div id="bottomText" class="textbox"></div>
+    </div>
+
+    <!-- SCENE 2 -->
+    <div id="scene2">
+
+        <img src="images/background.png" id="backgroundImage">
+
+        <div id="uiLayer">
+
+            <button id="clockButton" class="storyButton" > </button>
+
+            <button id="windowButton" class="storyButton" > </button>
+
+            <img src="images/phonenote.png" id="phoneButton" class="storyButton" >
+
+            <button id="doorButton" class="storyButton" > </button>
+
+            <button id="bedButton" class="storyButton" > </button>
+
+        </div>
+
+        <!-- POPUPS -->
+        <div id="clockPopup" class="popup"></div>
+
+        <img id="windowImage">
+        <div id="windowPopup" class="popup"></div>
+
+        <img id="phoneImage">
+        <div id="phonePopup" class="popup"></div>
+
+    </div>
+
+    <!-- SCENE 3 -->
+    <div id="scene3">
+
+        <img src="images/dooropen.png" id="doorBackground">
+
+        <div id="doorPopup" class="popup">
+            <p>door message</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
