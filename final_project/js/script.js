@@ -18,7 +18,7 @@ let phoneSoundPlayed = false;
 const loops = {
     1: {
         top: "Today’s another day.",
-        bottom: "Time to get up.",
+        bottom: "Time to get up.(Click to continue)",
         clock: ["7:00 AM", "I guess its morning."],
         windowText: ["It looks like spring.", "The air feels fresh."],
         phone: ["Mom texted again… she wants me to come out.", "I guess I’ve been in here a while."],
@@ -29,7 +29,7 @@ const loops = {
     },
     2: {
         top: "Today’s another day.",
-        bottom: "Didn’t I just wake up?",
+        bottom: "Didn’t I just wake up?(Click to continue)",
         clock: ["7:00 AM", "Still 7:00?"],
         windowText: ["It’s summer now.", "Wasn’t it just colder?"],
         phone: ["Same message again.", "She really wants me to go out."],
@@ -40,7 +40,7 @@ const loops = {
     },
     3: {
         top: "Today’s another day.",
-        bottom: "Why am I still here?",
+        bottom: "Why am I still here?(Click to continue)",
         clock: ["7:00 AM", "It hasn’t changed."],
         windowText: ["The leaves are falling.", "I don’t remember this happening."],
         phone: ["It’s the same message… again.", "Did I ever actually go out?"],
@@ -51,7 +51,7 @@ const loops = {
     },
     4: {
         top: "Today’s another day.",
-        bottom: "It keeps starting over.",
+        bottom: "It keeps starting over.(Click to continue)",
         clock: ["7:00 AM", "It’s always 7:00."],
         windowText: ["It’s snowing.", "How long have I been here?"],
         phone: ["It’s always this message.", "I don’t think there’s anywhere else to go."],
@@ -135,7 +135,7 @@ document.addEventListener("click", () => {
     if (!canContinue) return;
     if (scene1.style.display === "none") return;
 
-    if (loop === 5) return;  // Don't proceed to scene 2 in loop 5
+    if (loop === 5) return;  
 
     scene1.style.display = "none";
     scene2.style.display = "block";
@@ -143,14 +143,13 @@ document.addEventListener("click", () => {
 
     uiLayer.style.display = "block";
 
-    // Hide phone button initially, show after 1.5s with sound
-    phoneButton.style.display = "none";
+   phoneButton.style.display = "none";
     phoneSoundPlayed = false;
     setTimeout(() => {
         phoneButton.style.display = "block";
         if (!phoneSoundPlayed) {
             const audio = new Audio('sounds/notification-sound-effect.mp3');
-            audio.play().catch(() => {});  // Ignore errors if file missing
+            audio.play().catch(() => {}); 
             phoneSoundPlayed = true;
         }
     }, 1500);
@@ -229,9 +228,8 @@ let doorOpen = false;
 doorButton.onclick = (e) => {
     e.stopPropagation();
 
-    // Play door open sound once per click
-    const doorSound = new Audio('sounds/door-open-sound.mp3');
-    doorSound.play().catch(() => {});  // Ignore errors if file missing
+  const doorSound = new Audio('sounds/door-open-sound.mp3');
+    doorSound.play().catch(() => {}); 
 
     uiLayer.style.display = "none";
 
@@ -304,18 +302,47 @@ document.addEventListener("click", () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Start clock ticking sound on load with seamless looping
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+let audioContext;
+let clockBuffer;
+let clockSource;
+let clockSoundStarted = false;
+let clockStartRequested = false;
+
+function initClockAudio() {
+    if (audioContext) return;
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
     fetch('sounds/clock-ticking-sound-effect.mp3')
         .then(response => response.arrayBuffer())
         .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
-        .then(audioBuffer => {
-            const source = audioContext.createBufferSource();
-            source.buffer = audioBuffer;
-            source.connect(audioContext.destination);
-            source.loop = true;
-            source.start();
+        .then(buffer => {
+            clockBuffer = buffer;
+            if (clockStartRequested) {
+                startClockAudio();
+            }
         })
-        .catch(() => {});  // Ignore errors if file missing
-});
+        .catch(() => {});
+}
+
+function startClockAudio() {
+    if (clockSoundStarted || !clockBuffer) return;
+
+    if (audioContext.state === 'suspended') {
+        audioContext.resume().catch(() => {});
+    }
+
+    clockSource = audioContext.createBufferSource();
+    clockSource.buffer = clockBuffer;
+    clockSource.loop = true;
+    clockSource.connect(audioContext.destination);
+    clockSource.start();
+    clockSoundStarted = true;
+}
+
+initClockAudio();
+
+document.addEventListener('click', () => {
+    if (!clockSoundStarted) {
+        clockStartRequested = true;
+        startClockAudio();
+    }
+}, { once: true });
