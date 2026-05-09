@@ -62,7 +62,7 @@ const loops = {
     },
     5: {
         top: "Today’s another day.",
-        bottom: "Forever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ev..",
+        bottom: "Forever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ever and ev..",
         clock: ["7:00 AM", "It's always 7."],
         windowText: ["The window feels wrong.", "Outside feels empty."],
         phone: ["No new messages.", "That's worse."],
