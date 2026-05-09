@@ -28,7 +28,7 @@ body {
 
 .textbox {
     position: absolute;
-    padding: 15px 20px;
+    padding: 25px 20px;
     background: rgba(255,255,255,0.95);
     border: 2px solid black;
     font-size: 28px;
